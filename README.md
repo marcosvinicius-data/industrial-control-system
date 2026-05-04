@@ -99,7 +99,7 @@ O objetivo deste projeto é demonstrar habilidades em desenvolvimento front-end 
 
 ## 🌐 Demonstração frontend-dark
 
-🎥 Assista ao vídeo: https://drive.google.com/file/d/1TKVPFEuRbyd7ci17Hbzp5AZhcReKAL3B/view?usp=sharing
+🎥 Assista ao vídeo: https://drive.google.com/file/d/15U6tAbcvlo6Nj83I0CUbNXHm-ZG9aDcH/view?usp=sharing
 
 ---
 
