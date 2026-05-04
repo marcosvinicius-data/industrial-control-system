@@ -63,6 +63,10 @@
   align-items: center;
 }
 
+.linha input[type="checkbox"] {
+  width: auto;
+}
+
 /* BOTÃO */
 .btn-salvar {
   margin-top: 15px;

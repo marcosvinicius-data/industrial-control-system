@@ -684,13 +684,11 @@ height:100vh;
 
 .sidebar h2{
   margin-bottom:20px;
- 
+  font-size: 30px;
+  align-self: center;
 }
 
-/* .btn-sidebar {
-  border-top: 3px solid #00d4ff;
-  border-radius: 8px;
-} */
+
 .btn-sidebar {
   border-bottom: 3px solid #00d4ff;
   border-radius: 6px;
@@ -719,9 +717,7 @@ height:100vh;
 
 .sidebar button:focus {
   outline: none;
-  /* box-shadow: 0 0 0 3px #38bdf8; */
-  /* border: 2px solid #38bdf8; */
-  /* border-right: 5px solid #00d4ff; */
+
 }
 
 /* Hover (efeito bonito) */
@@ -734,17 +730,16 @@ height:100vh;
 
 /* Botão ativo */
 .sidebar button.ativo{
-  /* background: linear-gradient(135deg, #7dd3fc, #38bdf8); */
+ 
   color: #00d4ff;
   font-weight: bold;
   font-size: 18px;
   text-shadow: 0 0 1px rgba(0,0,0,0.5);
-  /* letter-spacing: 0.5px; */
+  
   text-transform: uppercase;
 }
 
 .sidebar button.ativo:hover{
-  /* background: linear-gradient(135deg, #7dd3fc, #38bdf8); */
   color: white;
   font-weight: bold;
   
@@ -780,9 +775,9 @@ overflow-y:auto;
   width: 100%;
   padding: 12px;
   border: none;
-  /* background: #3b82f6; */
+
   color: white;
-  /* border-radius: 8px; */
+
   border-bottom: 3px solid #00d4ff;
   cursor: pointer;
   font-weight: bold;

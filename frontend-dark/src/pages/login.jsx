@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./login.css";
 import eye from "../assets/unlock.png";
 import eyeOff from "../assets/padlock.png";
-import logo from "../assets/senai.png";
+import logo from "../assets/industria.png";
 
 export default function Login({ onLogin }) {
   const [usuario, setUsuario] = useState("");
@@ -35,7 +35,7 @@ export default function Login({ onLogin }) {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2><img src={logo} alt="logo senai" className="logoSenai"/> Sistema Industrial</h2>
+        <h2><img src={logo} alt="logo industria" className="logoIndustria"/> Sistema Industrial</h2>
         <p>Faça login para continuar</p>
 
         <form onSubmit={handleLogin}>

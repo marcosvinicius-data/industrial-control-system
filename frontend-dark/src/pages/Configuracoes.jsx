@@ -5,10 +5,10 @@ export default function Configuracoes() {
 
   const [config, setConfig] = useState({
     nome: "",
-    tipo: "Aluno",
-    turma: "",
-    unidade: "SENAI",
-    curso: "Automação Industrial",
+    perfil: "Usuário",
+    setor: "",
+    organizacao: "",
+    projeto: "",
     notificacoes: true
   });
 
@@ -16,61 +16,87 @@ export default function Configuracoes() {
     const dadosSalvos = localStorage.getItem("configSistema");
 
     if (dadosSalvos) {
-      const dados = JSON.parse(dadosSalvos);
-      setConfig(dados);
+      setConfig(JSON.parse(dadosSalvos));
     }
   }, []);
 
   const salvarConfig = () => {
     localStorage.setItem("configSistema", JSON.stringify(config));
-    alert("Configurações salvas!");
+    alert("Configurações salvas com sucesso!");
   };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
 
-    setConfig({
-      ...config,
+    setConfig((prev) => ({
+      ...prev,
       [name]: type === "checkbox" ? checked : value
-    });
+    }));
   };
 
   return (
     <div className="config-container">
       <h1>⚙️ Configurações</h1>
 
+      {/* USUÁRIO */}
       <div className="config-card">
         <h2>👤 Usuário</h2>
 
         <label>Nome</label>
-        <input name="nome" value={config.nome} onChange={handleChange} />
+        <input
+          name="nome"
+          placeholder="Digite seu nome"
+          value={config.nome}
+          onChange={handleChange}
+        />
 
-        <label>Tipo</label>
-        <select name="tipo" value={config.tipo} onChange={handleChange}>
-          <option>Aluno</option>
-          <option>Instrutor</option>
+        <label>Perfil</label>
+        <select
+          name="perfil"
+          value={config.perfil}
+          onChange={handleChange}
+        >
+          <option>Usuário</option>
+          <option>Administrador</option>
         </select>
 
-        <label>Turma</label>
-        <input name="turma" value={config.turma} onChange={handleChange} />
+        <label>Setor</label>
+        <input
+          name="setor"
+          placeholder="Ex: Produção"
+          value={config.setor}
+          onChange={handleChange}
+        />
       </div>
 
+      {/* SISTEMA */}
       <div className="config-card">
-        <h2>🏫 Sistema</h2>
+        <h2>🏢 Aplicação</h2>
 
-        <label>Unidade</label>
-        <input name="unidade" value={config.unidade} onChange={handleChange} />
+        <label>Organização</label>
+        <input
+          name="organizacao"
+          placeholder="Nome da empresa"
+          value={config.organizacao}
+          onChange={handleChange}
+        />
 
-        <label>Curso</label>
-        <input name="curso" value={config.curso} onChange={handleChange} />
+        <label>Projeto</label>
+        <input
+          name="projeto"
+          placeholder="Nome do sistema"
+          value={config.projeto}
+          onChange={handleChange}
+        />
       </div>
 
+      {/* PREFERÊNCIAS */}
       <div className="config-card">
         <h2>🔔 Preferências</h2>
 
         <div className="linha">
-          <span>Notificações</span>
-          <input 
+          <span>Receber notificações</span>
+          <input
             type="checkbox"
             name="notificacoes"
             checked={config.notificacoes}
@@ -80,7 +106,7 @@ export default function Configuracoes() {
       </div>
 
       <button className="btn-salvar" onClick={salvarConfig}>
-        Salvar Configurações
+        💾 Salvar Configurações
       </button>
     </div>
   );

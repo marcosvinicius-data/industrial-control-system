@@ -141,8 +141,8 @@ p.erro {
 }
 
 /* LOGO DO LOGIN  */
-.logoSenai {
-  max-width: 100%;
-  height: auto;
+.logoIndustria {
+  width: 240px;
+  height: 100px;
   border-radius: 12px;
 }

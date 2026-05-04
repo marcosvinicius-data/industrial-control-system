@@ -699,7 +699,8 @@ height:100vh;
 
 .sidebar h2{
   margin-bottom:20px;
- 
+  font-size: 30px;
+  align-self: center;
 }
 
 /* .btn-sidebar {

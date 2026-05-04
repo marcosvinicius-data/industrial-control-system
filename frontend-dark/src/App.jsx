@@ -30,7 +30,7 @@ export default function App() {
 
       <aside className="sidebar">
 
-        <h2> Senai Control</h2>
+        <h2> Robô Control</h2>
 
         <div className="btn-sidebar">
         <button 

@@ -39,8 +39,12 @@
 
 .linha {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+.linha input[type="checkbox"] {
+  width: auto;
 }
 
 .btn-salvar {
